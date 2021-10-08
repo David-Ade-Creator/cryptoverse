@@ -4,6 +4,7 @@ import {Select, Typography,Row, Col, Avatar, Card} from 'antd';
 import moment from "moment";
 
 import {useGetCryptoNewsQuery} from "../Services/cryptoNews";
+import Loader from '../Loader';
 
 const {Text,Title} = Typography;
 
@@ -15,7 +16,7 @@ function News({simplified}) {
 
     const {data:cryptoNews} = useGetCryptoNewsQuery({newsCategory: 'Cryptocurrency', count : simplified ? 6 : 12 })
     
-    if(!cryptoNews?.value) return 'Loading...'
+    if(!cryptoNews?.value) return <Loader/>;
 
     return (
         <Row gutter={[24,24]}>
