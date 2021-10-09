@@ -5,6 +5,7 @@ import {Card, Row, Col, Input} from "antd";
 
 import { useGetCryptosQuery} from "../Services/cryptoApi";
 import Loader from '../Loader';
+import Seo from '../Seo';
 
 function Cryptocurrencies({simplified}) {
     const count = simplified ? 10 : 100;
@@ -25,6 +26,7 @@ function Cryptocurrencies({simplified}) {
 
     return (
         <>
+        <Seo title={"Cryptocurrencies"} description={"all cryptocurrencies"} />
         {!simplified && (
             <div className="search-crypto">
             <Input placeholder="search Cryptocurrency" onChange={(e) =>setSearchTerm(e.target.value)} />

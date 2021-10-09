@@ -6,6 +6,7 @@ import {useGetCryptosQuery} from "../Services/cryptoApi";
 import { Link } from 'react-router-dom';
 import { Cryptocurrencies, News } from '../../components';
 import Loader from '../Loader';
+import Seo from '../Seo';
 
 
 const {Title} = Typography;
@@ -21,6 +22,7 @@ function Homepage() {
     
     return (
         <>
+        <Seo title={"Cryptoverse"} description={"Checkout all cryto coins and latest coin news"} />
         <Title level={2} className="heading">Global Crypto Stats</Title>
         <Row>
             <Col span={12}>

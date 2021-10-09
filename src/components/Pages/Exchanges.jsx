@@ -5,6 +5,7 @@ import HTMLReactParser from 'html-react-parser';
 
 import { useGetExchangesQuery } from '../Services/cryptoApi';
 import Loader from '../Loader';
+import Seo from '../Seo';
 
 const { Text } = Typography;
 const { Panel } = Collapse;
@@ -17,6 +18,7 @@ const Exchanges = () => {
 
   return (
     <>
+    <Seo title={"Exchanges"} description={"all cryptocurrencies exchanges"} />
       <Row>
         <Col span={6}>Exchanges</Col>
         <Col span={6}>24h Trade Volume</Col>

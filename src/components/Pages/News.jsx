@@ -5,6 +5,7 @@ import moment from 'moment';
 import { useGetCryptosQuery } from '../Services/cryptoApi';
 import { useGetCryptoNewsQuery } from '../Services/cryptoNews';
 import Loader from '../Loader';
+import Seo from '../Seo';
 
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
@@ -20,6 +21,7 @@ const News = ({ simplified }) => {
 
   return (
     <Row gutter={[24, 24]}>
+      <Seo title={"News"} description={"all cryptocurrencies news"} />
       {!simplified && (
         <Col span={24}>
           <Select

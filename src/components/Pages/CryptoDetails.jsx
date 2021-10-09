@@ -8,6 +8,7 @@ import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCi
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../Services/cryptoApi';
 import Loader from '../Loader';
 import LineChart from '../LineChart';
+import Seo from '../Seo';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -41,6 +42,7 @@ const CryptoDetails = () => {
 
   return (
     <Col className="coin-detail-container">
+      <Seo title={"CryptoDetails"} description={data?.data?.coin.name} />
       <Col className="coin-heading-container">
         <Title level={2} className="coin-name">
           {data?.data?.coin.name} ({data?.data?.coin.slug}) Price
